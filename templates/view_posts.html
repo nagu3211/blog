@@ -1,0 +1,44 @@
+{% extends 'post1.html' %}
+
+{% block content %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <DIV CLASS="container">
+        <center><h1 style="color:red"><u>FOOD BLOG POSTS</u></h1></center>
+    {% for i in posts %}
+    <h2 style="color:blue">{{i[0]}}.
+        {{i[1]}}</h2>
+    <h3>{{i[2]}}</h3>
+    <br>
+    <center>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPyJ2vhJ3Uo5QtZ4NgNzlpZFMUEfpyqRhWWw&usqp=CAU"/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ42UMdoYxhR6nsr8DB6BkZGf52JPg4HUBtg&usqp=CAU"/>
+    <br>
+    <br><a href="">click here for ingredients</a>
+    <br><a href="">click here for process</a>
+    <br>
+    <br>
+    <small>posted at:{{i[3]}}</small>
+    <form method="POST" action="{{url_for('delete_post',id=i[0])}}" onsubmit="return confirm('Are you sure want to delete this post?');">
+    <button class="btn btn-outline-danger">Delete</button>
+    </form>
+    <form method="GET" action="{{url_for('update_post',id=i[0])}}">
+    <button class="btn btn-outline-success">update</button>
+    </form>
+    {% endfor %}
+    </DIV>
+    for more biryani recipies:<br>
+    <a href="https://www.indianhealthyrecipes.com/mutton-biryani/">mutton biryani</a><br>
+    <a href="https://www.indianhealthyrecipes.com/veg-biryani/">veg biryani</a><br>
+    <a href="https://www.indianhealthyrecipes.com/paneer-biryani/">panner biryani</a>
+
+
+</body>
+</html>
+{% endblock %}

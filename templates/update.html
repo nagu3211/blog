@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-size: cover;
+        background-image: url("https://img.freepik.com/free-vector/blurred-bokeh-pattern-wallpaper-soft-touch-your-walls_1017-43483.jpg");
+    }
+
+</style>
+<body>
+    <CENTER>
+        <H1><U>UPDATE POST</U></H1>
+    <form method="POST">
+        title:<input type="text" name="title" value="{{post[1]}}"><br>
+        <br>
+        Content:
+        <textarea name="content" rows="15" cols="95">{{post[2]}}</textarea><br>
+        <br>
+        slug:<input type="text" name="slug" value="{{post[4]}}"><br>
+        <br>
+        <button class="btn btn-outline-success">SAVE</button>
+    </form>
+</CENTER>
+</body>
+</html>

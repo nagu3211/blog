@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			height: 100%;
+			font-family: Arial, sans-serif;
+			margin: 0;
+		}
+
+		.bg-img {
+			background-image: url("https://png.pngtree.com/background/20230416/original/pngtree-website-technology-ray-blue-background-picture-image_2443542.jpg");
+			min-height: 100vh;
+			background-size: cover;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.container {
+			position: relative;
+			max-width: 300px;
+			padding: 16px;
+			background: rgba(255, 255, 255, 0.8);
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			text-align: center;
+			color: black;
+			-webkit-text-stroke: 1px white;
+			margin-bottom: 20px;
+		}
+
+		b {
+			color: blac;
+			font-size: 18px;
+			-webkit-text-stroke: 1px blue;
+		}
+
+		input[type="text"],
+		input[type="password"] {
+			width: 100%;
+			padding: 12px;
+			margin: 8px 0;
+			border: 1px solid blue;
+			box-sizing: border-box;
+		}
+
+		.button {
+			background-color: blue;
+			color: white;
+			padding: 14px;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		.button:hover {
+			background-color: blue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="bg-img">
+		<h1>REGISTRATION FORM</h1>
+
+		<form method="POST" class="container">
+			<b>Username</b>
+			<input type="text" placeholder="Enter your username"
+				name="username" required>
+
+			<b>Password</b>
+			<input type="password" placeholder="Enter your password"
+				name="password" required>
+            
+            <b>mobile</b>
+                <input type="text" placeholder="Enter your mobile"
+                    name="mobile" required>   
+            
+            <b>email</b>
+                <input type="text" placeholder="Enter your valid mail"
+                    name="email" required> 
+                    
+            <b>address</b>
+                <input type="text" placeholder="Enter your address"
+                    name="address" required>        
+
+			<button type="submit" class="button">submit</button>
+		</form>
+	</div>
+</body>
+
+</html>
